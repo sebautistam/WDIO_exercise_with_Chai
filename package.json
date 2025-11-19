@@ -1,0 +1,23 @@
+{
+  "name": "wdio_exercise_chai",
+  "version": "1.0.0",
+  "description": "WDIO with Cucumber and Chai",
+  "license": "ISC",
+  "author": "sebautistam",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./src/config/wdio.conf.js",
+    "test:registration": "npx wdio ./src/config/wdio.conf.js --cucumberOpts.tagExpression='@registration'",
+    "test:login": "npx wdio ./src/config/wdio.conf.js --cucumberOpts.tagExpression='@login'",
+    "test:profile": "npx wdio ./src/config/wdio.conf.js --cucumberOpts.tagExpression='@profile'"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^9.20.1",
+    "@wdio/cucumber-framework": "^9.20.1",
+    "@wdio/local-runner": "^9.20.1",
+    "@wdio/spec-reporter": "^9.20.0",
+    "chai": "^6.2.1"
+  }
+}
